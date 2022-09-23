@@ -24,3 +24,32 @@ body{
 div:hover > .hero-shadow{
     box-shadow: -2rem -2rem 10rem 9rem #902F0D;
 } 
+
+.bg-skills-img{
+    background: url('../img/bg-skills.png') ;
+    overflow: hidden;
+    color: #FFFFFF;
+}
+
+.bg-skills-img__overlay{
+    background: rgba(238, 205, 51, 0.6);
+    overflow: hidden;
+
+}
+
+.swiper-pagination {
+    position: relative !important;
+}
+
+.swiper-pagination-bullet{
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    border: 1px #3C8566 solid;
+    }
+
+.swiper-pagination-bullet-active {
+    background-color: #3C8566 !important;
+
+}
+
+

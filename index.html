@@ -13,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <script src="./scripts/swiper.js" defer></script>
     <!-- Tailwind Output -->
     <link rel="stylesheet" href="./styles/output.css">
     <!-- Font Awesome -->
@@ -32,7 +36,7 @@
                 </span>
             </a>
             <!-- Navigation Items List -->
-            <ul class="hidden flex-row justify-between space-x-8 text-xl font-semibold text-primaryGreenLigth md:flex">
+            <ul class="hidden flex-row justify-between space-x-8 text-xl font-semibold text-primaryGreenLight md:flex">
                 <li class="transition-all duration-300 hover:text-primaryGreen"><a href="#hero">Home</a></li>
                 <li class="transition-all duration-300 hover:text-primaryGreen"><a href="#services">Services</a></li>
                 <li class="transition-all duration-300 hover:text-primaryGreen"><a href="#about">About Me</a></li>
@@ -94,7 +98,7 @@
                     <!-- Service -->
                     <li class="flex flex-row items-center p-8 space-x-4 w-full bg-white rounded-3xl shadow-lg">
                         <!-- Service Logo -->
-                        <figure class="p-5 rounded-full bg-primaryGreenLigth">
+                        <figure class="p-5 rounded-full bg-primaryGreenLight">
                             <i class="text-2xl text-white md:text-4xl fa-solid fa-display"></i>
                         </figure>
                         <!-- Service Description -->
@@ -107,7 +111,7 @@
                     <!-- Service -->
                     <li class="flex flex-row items-center p-8 space-x-4 w-full bg-white rounded-3xl shadow-lg">
                         <!-- Service Logo -->
-                        <figure class="p-5 rounded-full bg-primaryGreenLigth">
+                        <figure class="p-5 rounded-full bg-primaryGreenLight">
                             <i class="text-2xl text-white md:text-4xl fa-solid fa-display"></i>
                         </figure>
                         <!-- Service Description -->
@@ -120,7 +124,7 @@
                     <!-- Service -->
                     <li class="flex flex-row items-center p-8 space-x-4 w-full bg-white rounded-3xl shadow-lg">
                         <!-- Service Logo -->
-                        <figure class="p-5 rounded-full bg-primaryGreenLigth">
+                        <figure class="p-5 rounded-full bg-primaryGreenLight">
                             <i class="text-2xl text-white md:text-4xl fa-solid fa-display"></i>
                         </figure>
                         <!-- Service Description -->
@@ -144,11 +148,11 @@
                     <!-- Services Right Projects List -->
                     <ul class="flex flex-row justify-between px-6 w-full ">
                         <li class="flex flex-col">
-                            <strong class="text-4xl md:text-6xl text-primaryGreen">190+</strong>
+                            <strong class="text-3xl md:text-6xl text-primaryGreen">190+</strong>
                             <small class="text-md md:text-lg">project Complited</small>
                         </li>
                         <li class="flex flex-col">
-                            <strong class="text-4xl md:text-6xl text-primaryGreen">190+</strong>
+                            <strong class="text-3xl md:text-6xl text-primaryGreen">190+</strong>
                             <small class="text-md md:text-lg">project Complited</small>
                         </li>
                     </ul>
@@ -159,21 +163,21 @@
     <!-- About Section -->
     <section id="about">
         <!-- About Container -->
-        <div
-            class="container flex overflow-hidden relative flex-row justify-center items-center px-5 mx-auto md:px-0 md:space-y-2 ">
+        <div class="flex relative flex-row ">
             <!-- About Left Wrapper -->
-            <div class="relative z-20 w-11/12 md:w-8/12">
-                <img class="absolute md:top-0 md:relative top-[-100px]" src="./img/avatar/woman-about.png" alt="">
+            <div class="w-3/5 ">
+                <img class="absolute object-cover -z-10  left-[-120px] h-full md:relative md:left-0 md:w-full "
+                    src="./img/avatar/woman-about.png" alt="">
             </div>
             <!-- About Right  -->
-            <div class="z-0 py-4 w-2/5 md:right-7 md:space-y-4 md:w-5/12">
+            <div class="py-16 pr-3 w-3/5">
                 <!-- About Header -->
                 <h2 class="mx-auto text-xl font-bold text-center md:text-4xl text-primaryGreen lg:text-6xl">
                     About
-                    Me</h2>
-                <!-- About Description -->
+                    Me
+                </h2>
                 <p
-                    class="flex flex-col p-4 space-y-3 text-xs text-white rounded-md md:leading-9 md:text-base bg-primaryGreenLigth">
+                    class="flex flex-col p-4 space-y-3 text-xs font-medium text-white rounded-md md:leading-9 md:text-base bg-primaryGreenLight">
                     <span>Lorem
                         ipsum
                         dolor
@@ -189,6 +193,7 @@
                         minus
                         nulla eos maxime internos aut tempora necessitatibus et sint possimus.</span>
                 </p>
+
                 <div
                     class="flex flex-row justify-around pt-3 space-y-1 text-xs font-medium md:text-xl text-primaryGreen">
                     <button
@@ -202,6 +207,210 @@
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="bg-primaryGray">
+        <!-- Skills Container -->
+        <div
+            class="container flex overflow-hidden flex-col justify-between items-center py-16 px-8 mx-auto space-y-16 md:px-2 xl:px-20">
+            <!-- Skills Header Primary -->
+            <header>
+                <h2 class="mx-auto text-xl font-bold text-center md:text-4xl text-primaryGreen lg:text-6xl">
+                    Skills
+                </h2>
+                <!-- Skills Header Secondary -->
+                <h3 class="mx-auto text-xl text-center md:text-4xl text-primaryRed lg:text-5xl">I Develop My
+                    Skills Regularly</h3>
+            </header>
+            <!-- Skills List -->
+            <ul
+                class="grid grid-cols-1 gap-y-4 gap-x-48 justify-items-center space-y-5 w-full md:gap-y-10 md:grid-cols-2 md:flex-row md:space-y-0">
+                <!-- Skills List Item -->
+                <li class="w-full ">
+                    <!-- Skills List Item Header -->
+                    <header class="flex justify-between">
+                        <strong>Figma</strong>
+                        <strong>90%</strong>
+                    </header>
+                    <!-- Skills List Item Bar -->
+                    <div class="w-full h-2 rounded-lg outline-offset-1 outline-1 outline">
+                        <div class="w-11/12 h-full rounded-lg bg-primaryRed"></div>
+                    </div>
+                </li>
+                <!-- Skills List Item -->
+                <li class="w-full ">
+                    <!-- Skills List Item Header -->
+                    <header class="flex justify-between">
+                        <strong>Figma</strong>
+                        <strong>50%</strong>
+                    </header>
+                    <!-- Skills List Item Bar -->
+                    <div class="w-full h-2 rounded-lg outline-offset-1 outline-1 outline">
+                        <div class="w-6/12 h-full rounded-lg bg-primaryRed"></div>
+                    </div>
+                    <!-- Skills List Item -->
+                <li class="w-full ">
+                    <!-- Skills List Item Header -->
+                    <header class="flex justify-between">
+                        <strong>Figma</strong>
+                        <strong>30%</strong>
+                    </header>
+                    <!-- Skills List Item Bar -->
+                    <div class="w-full h-2 rounded-lg outline-offset-1 outline-1 outline">
+                        <div class="w-4/12 h-full rounded-lg bg-primaryRed"></div>
+                    </div>
+                </li>
+                <!-- Skills List Item -->
+                <li class="w-full ">
+                    <!-- Skills List Item Header -->
+                    <header class="flex justify-between">
+                        <strong>Figma</strong>
+                        <strong>80%</strong>
+                    </header>
+                    <!-- Skills List Item Bar -->
+                    <div class="w-full h-2 rounded-lg outline-offset-1 outline-1 outline">
+                        <div class="w-10/12 h-full rounded-lg bg-primaryRed"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="flex relative justify-center ">
+            <div class="rounded-lg bg-skills-img">
+                <!-- Image Wrapper -->
+                <div class="bg-skills-img__overlay">
+                    <p class="py-8 px-4 font-semibold text-center text-md md:py-12 md:px-32 md:text-4xl">Let’s Work
+                        Together On
+                        Your
+                        Next
+                        Project!
+                    </p>
+                </div>
+            </div>
+            <button
+                class="absolute top-16 z-30 py-2 px-4 text-xl font-medium text-white uppercase rounded-lg md:top-32 bg-primaryGreenLight">Hire
+                Me</button>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container flex overflow-hidden flex-col justify-between items-center py-20 mx-auto space-y-20 ">
+            <header class="px-20">
+                <h2 class="text-xl font-bold text-center md:text-4xl text-primaryGreen lg:text-6xl">
+                    Testimonials
+                </h2>
+                <!-- Skills Header Secondary -->
+                <h3 class="mx-auto text-xl text-center md:text-4xl text-primaryRed lg:text-5xl">What Clients Say</h3>
+            </header>
+            <!-- Slider main container -->
+            <div class="w-full swiper">
+                <!-- Additional required wrapper -->
+                <ul class="w-full swiper-wrapper">
+                    <!-- Slides -->
+                    <li
+                        class="flex flex-col justify-center items-center py-4 space-y-8 w-full bg-white rounded-3xl border-2 md:px-8 swiper-slide border-primaryGreenLight">
+                        <i class="text-4xl fa-solid fa-quote-left text-primaryGreen"></i>
+                        <q class="text-center md:text-lg text-primaryGreenLight">Lorem ipsum, dolor sit amet
+                            consectetur
+                            adipisicing
+                            elit.
+                            Deleniti accusamus exercitationem dolor fugit incidunt fugiat doloribus, perspiciatis non
+                            tempore, delectus minus natus dolorem optio quasi!</q>
+
+                        <div class="flex flex-row items-center space-x-2">
+                            <img src="./img/testimonials/ben-mika.png" alt="Ben Mika">
+                            <p class="flex flex-col ">
+                                <cite class="text-xl not-italic font-bold text-primaryGreen">Ben Mika</cite>
+                                <span class="text-lg font-medium text-primaryRed">Project Manager</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li
+                        class="flex flex-col justify-center items-center py-4 px-8 space-y-8 w-full bg-white rounded-3xl border-2 swiper-slide border-primaryGreenLight">
+                        <i class="text-4xl fa-solid fa-quote-left text-primaryGreen"></i>
+                        <q class="text-lg text-center text-primaryGreenLight">Lorem ipsum, dolor sit amet
+                            consectetur
+                            adipisicing
+                            elit.
+                            Deleniti accusamus exercitationem dolor fugit incidunt fugiat doloribus, perspiciatis non
+                            tempore, delectus minus natus dolorem optio quasi!</q>
+
+                        <div class="flex flex-row items-center space-x-2">
+                            <img src="./img/testimonials/ben-mika.png" alt="Ben Mika">
+                            <p class="flex flex-col ">
+                                <cite class="text-xl not-italic font-bold text-primaryGreen">Ben Mika</cite>
+                                <span class="text-lg font-medium text-primaryRed">Project Manager</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li
+                        class="flex flex-col justify-center items-center py-4 px-8 space-y-8 w-full bg-white rounded-3xl border-2 swiper-slide border-primaryGreenLight">
+                        <i class="text-4xl fa-solid fa-quote-left text-primaryGreen"></i>
+                        <q class="text-lg text-center text-primaryGreenLight">Lorem ipsum, dolor sit amet
+                            consectetur
+                            adipisicing
+                            elit.
+                            Deleniti accusamus exercitationem dolor fugit incidunt fugiat doloribus, perspiciatis non
+                            tempore, delectus minus natus dolorem optio quasi!</q>
+
+                        <div class="flex flex-row items-center space-x-2">
+                            <img src="./img/testimonials/ben-mika.png" alt="Ben Mika">
+                            <p class="flex flex-col ">
+                                <cite class="text-xl not-italic font-bold text-primaryGreen">Ben Mika</cite>
+                                <span class="text-lg font-medium text-primaryRed">Project Manager</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="py-12 swiper-pagination">
+                    <li class="p-4 rounded-full border custom-pagination-item"></li>
+                    <li class="p-4 rounded-full border custom-pagination-item"></li>
+                    <li class="p-4 rounded-full border custom-pagination-item"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-gradient-to-b from-primaryYelow">
+        <div
+            class="container flex overflow-hidden justify-center items-center px-2 pt-8 mx-auto md:space-y-5 md:flex-row md:px-16 xl:px-20">
+            <!-- Contact  Left -->
+            <div class="space-y-5 w-full md:w-5/12">
+                <form class="flex flex-col py-10 px-4 space-y-5 rounded-2xl shadow-lg md:px-16 bg-primaryGreenLight">
+                    <label class="text-3xl font-bold text-white " for="message">Send Me a Message</label>
+                    <input class="py-2 px-4 font-semibold rounded-lg shadow-2xl" type="text" placeholder="name"
+                        required>
+                    <input class="py-2 px-4 font-semibold rounded-lg" type="email" placeholder="email" required>
+                    <textarea class="py-2 px-4 h-32 font-semibold rounded-lg" type="text" placeholder="message"
+                        id="message" required></textarea>
+                </form>
+
+                <address>
+                    <figure class="inline-block py-[10px] px-4 rounded-full bg-primaryGreenLight">
+                        <i class="text-lg text-white fa-solid fa-location-dot"></i>
+                    </figure>
+                    <span class="not-italic font-semibold">Baku, Azerbaijan</span>
+                </address>
+                <address>
+                    <figure class="inline-block py-[10px] px-[12px] rounded-full bg-primaryGreenLight">
+                        <i class="text-lg text-white fa-solid fa-envelope"></i>
+                    </figure>
+                    <span class="not-italic font-semibold">ahmed.jaferov@gmail.com</span>
+                </address>
+                <address>
+                    <figure class="inline-block py-[10px] px-[12px] rounded-full bg-primaryGreenLight">
+                        <i class="text-lg text-white fa-solid fa-phone"></i>
+                    </figure>
+                    <span class="not-italic font-semibold">Baku, Azerbaijan</span>
+                </address>
+            </div>
+            <!-- Contact Right -->
+            <div class="hidden md:block">
+                <img src="./img/avatar/woman-contact.png" alt="woman with orange hair">
+            </div>
+        </div>
+
     </section>
 </body>
 

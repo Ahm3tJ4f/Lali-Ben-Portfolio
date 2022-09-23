@@ -9,14 +9,14 @@ module.exports = {
     colors: {
       'primaryRed': '#902F0D',
       'primaryGreen': '#012C1A',
-      'primaryGreenLigth': '#3C8566',
+      'primaryGreenLight': '#3C8566',
       'primaryYelow': '#EECD33',
       'primaryYelowLight': '#FFFAE9',
       'white': '#ffff',
       'primaryGray': '#fbfbfb'
     },
     fontSize: {
-      'xs': '4px',
+      'xs': '8px',
       'sm': '.875rem',
       'tiny': '.875rem',
       'base': '1rem',
