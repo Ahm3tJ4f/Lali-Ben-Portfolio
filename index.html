@@ -20,11 +20,27 @@
     <!-- Tailwind Output -->
     <link rel="stylesheet" href="./styles/output.css">
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/05f3ef050b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/05f3ef050b.js" crossorigin="anonymous" defer></script>
+    <!-- Hamburger button -->
+    <script src="./scripts/hamburger-menu.js" defer></script>
     <title>Lali Ben</title>
 </head>
 
 <body class="bg-primaryYelowLight">
+    <div class="hidden absolute invisible hamburger-menu ">
+        <header class="float-right p-5">
+            <a href="#" class="close-button"><i class="text-2xl text-white fa-solid fa-x"></i></a>
+        </header>
+
+        <ul class="flex flex-col pt-20 pl-2 space-y-8 text-sm text-primaryYelowLight ">
+            <li><a href="#hero" class="p-4 transition-all text-primaryRed ">Home</a></li>
+            <li><a href="#services" class="p-4 transition-all hover:text-primaryRed">Services</a></li>
+            <li><a href="#about" class="p-4 transition-all hover:text-primaryRed">About Me</a></li>
+            <li><a href="#skills" class="p-4 transition-all hover:text-primaryRed">Skills</a></li>
+            <li><a href="#testimonials" class="p-4 transition-all hover:text-primaryRed">Clients</a></li>
+            <li><a href="#contact" class="p-4 transition-all hover:text-primaryRed">Contact</a></li>
+        </ul>
+    </div>
     <!-- Navigation -->
     <nav>
         <!-- Navigation Container -->
@@ -44,6 +60,11 @@
                 <li class="transition-all duration-300 hover:text-primaryGreen"><a href="#testimonials">Clients</a></li>
                 <li class="transition-all duration-300 hover:text-primaryGreen"><a href="#contact">Contact</a></li>
             </ul>
+            <a href="#" class="flex lg:hidden hamburger-button items-center h-[30px] cursor-pointer ">
+                <div class="relative hamburger-lines">
+                    <span class="block rounded-[2px] h-[3px] w-8 bg-primaryGreen  "></span>
+                </div>
+            </a>
         </div>
     </nav>
     <!-- Hero Section -->
@@ -310,7 +331,9 @@
                     <li
                         class="flex flex-col justify-center items-center py-4 space-y-8 w-full bg-white rounded-3xl border-2 md:px-8 swiper-slide border-primaryGreenLight">
                         <i class="text-4xl fa-solid fa-quote-left text-primaryGreen"></i>
-                        <q class="text-center md:text-lg text-primaryGreenLight">Lorem ipsum, dolor sit amet
+                        <q class="text-center cursor-pointer md:text-lg text-primaryGreenLight">Lorem
+                            ipsum, dolor sit
+                            amet
                             consectetur
                             adipisicing
                             elit.
@@ -328,7 +351,7 @@
                     <li
                         class="flex flex-col justify-center items-center py-4 px-8 space-y-8 w-full bg-white rounded-3xl border-2 swiper-slide border-primaryGreenLight">
                         <i class="text-4xl fa-solid fa-quote-left text-primaryGreen"></i>
-                        <q class="text-lg text-center text-primaryGreenLight">Lorem ipsum, dolor sit amet
+                        <q class="text-lg text-center cursor-pointer text-primaryGreenLight">Lorem ipsum, dolor sit amet
                             consectetur
                             adipisicing
                             elit.
@@ -346,7 +369,7 @@
                     <li
                         class="flex flex-col justify-center items-center py-4 px-8 space-y-8 w-full bg-white rounded-3xl border-2 swiper-slide border-primaryGreenLight">
                         <i class="text-4xl fa-solid fa-quote-left text-primaryGreen"></i>
-                        <q class="text-lg text-center text-primaryGreenLight">Lorem ipsum, dolor sit amet
+                        <q class="text-lg text-center cursor-pointer text-primaryGreenLight">Lorem ipsum, dolor sit amet
                             consectetur
                             adipisicing
                             elit.

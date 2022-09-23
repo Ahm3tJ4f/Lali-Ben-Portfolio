@@ -53,3 +53,51 @@ div:hover > .hero-shadow{
 }
 
 
+
+.hamburger-lines::before
+    {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        border-radius: 2px;
+        height: 3px;
+        top:-10px;
+        display:block;
+        background-color: #012C1A;
+
+    }
+
+    .hamburger-lines::after {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        border-radius: 2px;
+        height: 3px;
+        top:10px;
+        display:block;
+        background-color: #012C1A;
+    }
+
+
+    .hamburger-button:hover > a:nth-child(2)::before {
+        transform: translateY(3px) ;
+    }
+
+    .hamburger-button:hover > a:nth-child(2)::after {
+        transform: translateY(-3px) ;
+    }
+
+    .hamburger-menu {
+        position: fixed;
+        right:0;
+        z-index: 51;
+        width: 300px;
+        height:100vh;
+        background-color:#012C1A;
+        transition: all .3s;
+        transform: translateX(100vw);
+    }
+
+    .show-menu {
+        transform: translateX(0);
+    }
